@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>R Digital Solutions</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <a href="#hero">
+      <img src="RDS-nav.png" alt="R Digital Solutions Logo">
+    </a>
+  </div>
+  <div class="nav-right">
+    <nav class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+
+  
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+
+<div class="nav-overlay"></div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1>
+      We Build Brands That <br />
+      <span>Actually Grow</span>
+    </h1>
+
+    <p>
+      Performance marketing + creative execution that drives real business results.
+    </p>
+
+    <div class="buttons">
+      <button class="primary" onclick="openLeadModal()">
+        Connect 1 on 1
+      </button>
+      <!-- <button class="secondary">Workings</button> -->
+    </div>
+
+    <div class="lead-modal" id="leadModal">
+
+      <div class="lead-box">
+
+        <!-- HEADER -->
+        <div class="lead-header">
+          <h3>Book a Strategy Call</h3>
+          <span onclick="closeLeadModal()">✕</span>
+        </div>
+
+        <!-- BODY -->
+        <div class="lead-body">
+
+          <!-- STEP 1 -->
+          <div id="leadStep" class="lead-step active">
+
+            <div class="form-group">
+              <input id="leadName" placeholder="Your Name" />
+            </div>
+
+            <div class="form-group">
+              <input id="leadPhone" placeholder="Phone Number" />
+            </div>
+
+            <div class="form-group">
+              <textarea id="leadGoal" placeholder="What do you want to achieve?"></textarea>
+            </div>
+
+            <button class="primary full" onclick="submitLead()">
+              Continue
+            </button>
+
+          </div>
+
+          <!-- STEP 2 -->
+          <div id="calendlyStep" class="lead-step">
+            <div id="calendlyEmbed"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- <div class="hero-metrics">
+      <div><h3>+120%</h3><p>Avg Growth</p></div>
+      <div><h3>50+</h3><p>Clients</p></div>
+      <div><h3>₹1Cr+</h3><p>Revenue</p></div>
+    </div> -->
+  </div>
+</section>
+
+<section class="section reveal" id="about">
+
+  <h2 class="section-title">About R Digital Solutions</h2>
+  <!-- <p class="section-sub">
+    We build marketing systems that drive real business growth — not just visibility.
+  </p> -->
+
+  <div class="about-container">
+
+  <!-- LEFT -->
+    <div class="about-text">
+      <h3>Turning Ideas Into Measurable Growth</h3>
+
+      <p>At R Digital Solutions, we help brands transform ideas into high-performing digital experiences...</p>
+
+      <p>We combine data-driven strategies with creative execution...</p>
+
+      <div class="about-points">
+        <div>✔ Strategy backed by data</div>
+        <div>✔ Creative that drives action</div>
+        <div>✔ Focus on real outcomes</div>
+      </div>
+    </div>
+
+  <!-- RIGHT -->
+    <div class="vision-card">
+      <h3>Our Vision</h3>
+      <p>
+        To become a performance-driven marketing partner that helps businesses grow,
+        scale, and sustain in the digital world.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SERVICES -->
+<section id="services" class="services-rotator">
+
+  <div class="container">
+
+    <div class="section-header center">
+      <h2 class="section-title">What We Do</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="rotator-container">
+
+      <!-- VISUAL -->
+      <div class="rotator-visual">
+
+        <div class="circle big" data-index="0"></div>
+        <div class="circle small c1" data-index="1"></div>
+        <div class="circle small c2" data-index="2"></div>
+        <div class="circle small c3" data-index="3"></div>
+        <div class="circle small c4" data-index="4"></div>
+
+      </div>
+
+      <!-- CONTENT -->
+      <div class="rotator-content">
+        <h3 id="service-title"></h3>
+        <p id="service-desc"></p>
+      </div>
+    </div>
+    <div class="services-mobile">
+
+        <div class="services-track">
+
+          <div class="service-item">
+            <img src="seo.jpg">
+            <h4>SEO</h4>
+            <p>Improve rankings and organic visibility.</p>
+          </div>
+
+          <div class="service-item">
+            <img src="paid.jpg">
+            <h4>Paid Campaigns</h4>
+            <p>Drive traffic and maximize ROI.</p>
+          </div>
+
+          <div class="service-item">
+            <img src="smm.jpg">
+            <h4>Creative Design</h4>
+            <p>Visuals that capture attention.</p>
+          </div>
+
+          <div class="service-item">
+            <img src="SMO.jpg">
+            <h4>SMO</h4>
+            <p>Build strong social presence.</p>
+          </div>
+
+          <div class="service-item">
+            <img src="website.jpg">
+            <h4>Website Handling</h4>
+            <p>Maintain and optimize performance.</p>
+          </div>
+
+        </div>
+
+      </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<!-- <section class="section reveal">
+  <h2 class="section-title">What Clients Say</h2>
+
+  <div class="grid">
+    <div class="testimonial-card">
+      <div class="testimonial-top">
+        <img src="https://i.pravatar.cc/60?img=1">
+        <div>
+          <h4>Rahul Sharma</h4>
+          <span>E-commerce</span>
+        </div>
+      </div>
+      <p>“We scaled faster than expected. Real results.”</p>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-top">
+        <img src="https://i.pravatar.cc/60?img=2">
+        <div>
+          <h4>Ananya Verma</h4>
+          <span>Startup</span>
+        </div>
+      </div>
+      <p>“They actually understand performance + design.”</p>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="testimonial-top">
+        <img src="https://i.pravatar.cc/60?img=3">
+        <div>
+          <h4>Arjun Patel</h4>
+          <span>Local Brand</span>
+        </div>
+      </div>
+      <p>“Finally a marketing system that works.”</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+
+  <h2 class="section-title">Meet Our Team</h2>
+  <p class="section-sub">These people work on making our product best.</p>
+
+  <div class="carousel">
+
+    <div class="card team-card active">
+      <img src="images/team1.jpg">
+      <div class="info">
+        <h4>Nikita Xing</h4>
+        <span>HR Manager</span>
+      </div>
+    </div>
+
+    <div class="card team-card">
+      <img src="images/team2.jpg">
+      <div class="info">
+        <h4>Harsh Patel</h4>
+        <span>Design Head</span>
+      </div>
+    </div>
+
+    <div class="card team-card">
+      <img src="images/team3.jpg">
+      <div class="info">
+        <h4>Sasha Grey</h4>
+        <span>Team Lead</span>
+      </div>
+    </div>
+  </div>
+
+</section> -->
+
+<section id="why" class="section reveal">
+
+  <h2 class="section-title">Why Choose R Digital Solutions</h2>
+  <!-- <p class="section-sub">
+    We don’t just run campaigns — we build systems that drive consistent growth.
+  </p> -->
+
+  <div class="why-grid">
+
+    <div class="why-card">
+      <h3>Result-Focused Approach</h3>
+      <p>Every strategy is built to generate measurable business outcomes.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Creative + Performance</h3>
+      <p>We combine strong design with data-driven execution.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>Custom Strategies</h3>
+      <p>No templates — everything is tailored to your business.</p>
+    </div>
+
+    <div class="why-card">
+      <h3>End-to-End Execution</h3>
+      <p>From planning to scaling — we handle everything.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section reveal">
+
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <p class="section-sub">
+    Everything you need to know before getting started.
+  </p>
+
+  <div class="faq-grid">
+
+    <div class="faq-card">
+      <div class="faq-head">
+        <span>What services does R Digital Solutions provide?</span>
+        <i data-lucide="plus"></i>
+      </div>
+      <div class="faq-body">
+        We offer a wide range of digital marketing services including SEO, SMO, paid campaigns, social media handling, website management, and creative design services.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-head">
+        <span>How long does it take to see results?</span>
+        <i data-lucide="plus"></i>
+      </div>
+      <div class="faq-body">
+        Results depend on the service. Paid campaigns can show immediate results, while SEO typically takes a few months to show significant improvement.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-head">
+        <span>Do you provide customized marketing strategies?</span>
+        <i data-lucide="plus"></i>
+      </div>
+      <div class="faq-body">
+        Yes, we create personalized strategies based on your business goals, target audience, and industry.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-head">
+        <span>What industries do you work with?</span>
+        <i data-lucide="plus"></i>
+      </div>
+      <div class="faq-body">
+        We work with startups, small businesses, and established brands across multiple industries.
+      </div>
+    </div>
+
+    <div class="faq-card">
+      <div class="faq-head">
+        <span>How can I contact R Digital Solutions?</span>
+        <i data-lucide="plus"></i>
+      </div>
+      <div class="faq-body">
+        You can contact us directly through the phone number provided in this document for consultations and service inquiries.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<div class="admin-modal" id="adminModal">
+
+    <div class="admin-box">
+      <h3>Admin Login</h3>
+
+      <input type="email" id="adminEmail" placeholder="Email" />
+      <input type="password" id="adminPassword" placeholder="Password" />
+
+      <button onclick="login()">Login</button>
+
+      <p class="forgot">Forgot password? Contact developer</p>
+    </div>
+
+  </div>
+  <div class="admin-overlay" id="adminPanel">
+
+  <div class="admin-dashboard">
+
+    <div class="admin-header">
+      <h2>Enquiries Dashboard</h2>
+      <button onclick="closeAdmin()">✕</button>
+    </div>
+
+    <div id="cardsContainer" class="cards-container"></div>
+
+  </div>
+
+</div>
+<!-- CTA -->
+<section id="contact" class="contact-section reveal">
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h2>Let’s Work Together</h2>
+      <p>
+        Ready to scale your business? Reach out to us and let’s build something impactful.
+      </p>
+
+      <div class="info-block">
+        <i data-lucide="phone"></i>
+        <div>
+          <h4>Phone</h4>
+          <span>+91 7732052904</span>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <i data-lucide="map-pin"></i>
+        <div>
+          <h4>Location</h4>
+          <span>India</span>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <i data-lucide="mail"></i>
+        <div>
+          <h4>Email</h4>
+          <span>contact@R Digital Solutions.com</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="form-wrapper">
+
+  <!-- FORM -->
+      <form id="leadForm">
+
+        <input name="name" placeholder="Your Name" required />
+        <input name="business" placeholder="Business Name" required />
+        <input name="phone" placeholder="Phone Number" required />
+        <textarea name="message" placeholder="Your Requirement"></textarea>
+
+        <button type="submit">Get Started</button>
+
+      </form>
+
+      <!-- SUCCESS STATE -->
+      <div class="form-success">
+        <div class="checkmark"></div>
+        <h3>Request Submitted</h3>
+        <p>We’ll get back to you shortly.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <p class="copyright">
+      © 2026 R Digital Solutions. All rights reserved.
+    </p>
+
+    <p class="handled" id="adminTrigger">
+      Handled by <span>R Digital Solutions</span>
+    </p>
+
+  </div>
+  
+
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
